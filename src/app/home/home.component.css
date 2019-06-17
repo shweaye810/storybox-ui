@@ -1,0 +1,16 @@
+.card {
+  margin-top: 1%;
+}
+
+.main-content {
+  margin-top: 6%;
+}
+
+.sticky {
+    position: sticky;
+    top: 12%;
+    /* background: green; */
+    padding-left: 2%
+    /* padding-top: 12%; */
+
+}

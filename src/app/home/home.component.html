@@ -1,0 +1,243 @@
+<div fxLayout="row" fxLayoutAlign="left start" class="main-content">
+    
+  <div fxFlex="25" class="sticky">
+    <p>
+      left
+    </p>
+
+  </div>
+  <div fxFlex="45">
+    <mat-card class="card">
+      <mat-form-field>
+        <textarea matInput placeholder="What's on your mind?"></textarea>
+      </mat-form-field>
+    </mat-card>
+    <mat-card *ngFor="let journal of journals" class="card">
+      <mat-card-header>
+        <mat-card-title>{{name}}</mat-card-title>
+        <mat-card-subtitle>{{journal.date}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{journal.text}}</p>
+
+      </mat-card-content>
+
+    </mat-card>
+
+
+  </div>
+  <div class="sticky">
+      <p>
+        right
+      </p>
+  
+    </div>
+</div>
+
+<!-- 
+<mat-sidenav-container class="main-content example-container ">
+  <mat-sidenav opened mode="side" opened>start</mat-sidenav>
+  <mat-sidenav opened mode="side" opened position="end">end</mat-sidenav>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  <p>main content</p>
+  Main content
+  Main content
+  Main content
+  Main content
+  Main content
+  Main content
+  Main content
+
+</mat-sidenav-container> -->
