@@ -10,6 +10,11 @@ import { MaterialModule } from './material-module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DatePipe } from '@angular/common';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { FormsModule } from '@angular/forms';
+import { HeaderInterceptor } from './header.interceptor';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -18,15 +23,20 @@ import { DatePipe } from '@angular/common';
     HomeComponent,
     NavbarComponent,
     WorldComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     FlexLayoutModule,
+    FormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, {
+    provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
