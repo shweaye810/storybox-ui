@@ -1,35 +1,20 @@
-<!-- <div fxLayout="row" fxLayoutAlign="left center" class="sticky">
-  <div fxFlex="15">
-    <p>storybox logo</p>
-
-  </div>
-  <div fxFlex="50">
-    <form class="search-from">
-      <mat-form-field class="search">
-        <input matInput placeholder="Search">
-      </mat-form-field>
-    </form>
-  </div>
-</div> -->
 
 <mat-toolbar class="sticky">
   <mat-toolbar-row>
-    <span>
-      <p>Storybox</p>
+
+      <img class="logo" src="../../assets/images/Storybox-logo.png">
+    <form class="search-from" (keyup.enter)="search()">
+      <mat-form-field class="search" color="primary">
+        <input matInput [(ngModel)]="searchText" name="searchText" placeholder="Search">
+      </mat-form-field>
+    </form>
+    <span class="spacer">
 
     </span>
-    <span>
-      <form class="search-from">
-        <mat-form-field class="search" color="primary">
-          <input matInput placeholder="Search">
-        </mat-form-field>
-      </form>
+    <span style="font-weight: normal; font-size: small">
+      {{authService.username}}
+
     </span>
+
   </mat-toolbar-row>
 </mat-toolbar>
-
-<!-- <form class="search-from"> 
-    <mat-form-field class="search" color="primary">
-      <input matInput placeholder="Search">
-    </mat-form-field>
-  </form> -->
