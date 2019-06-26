@@ -1,6 +1,8 @@
 export class Journal {
-    date: String;
-    text: String;
-    tags: String[];
+    date: string;
+    text: string;
+    username: String;
+    id: string;
+    img: string[] = [];
     
 }
