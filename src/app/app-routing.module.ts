@@ -5,13 +5,13 @@ import { WorldComponent } from './world/world.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent,runGuardsAndResolvers: 'always' },
   { path: 'world', component: WorldComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'}) ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
