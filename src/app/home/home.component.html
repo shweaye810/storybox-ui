@@ -1,20 +1,34 @@
+
 <div fxLayout="row" fxLayoutAlign="left start" class="main-content">
-    
-  <div fxFlex="25" class="sticky">
+
+  <div fxFlex="30" class="sticky">
     <p>
-      left
     </p>
 
   </div>
   <div fxFlex="45">
     <mat-card class="card">
-      <mat-form-field>
-        <textarea matInput placeholder="What's on your mind?"></textarea>
-      </mat-form-field>
+      <mat-card-content>
+        <mat-form-field style="width: 75%;">
+          <textarea matInput 
+          cdkTextareaAutosize 
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="1"
+          cdkAutosizeMaxRows="5" 
+          #journal 
+          placeholder="What's on your mind?"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <div fxFlex></div>
+        <button mat-button (click)="add(journal.value); journal.value=''">Post</button>
+      </mat-card-actions>
+
     </mat-card>
     <mat-card *ngFor="let journal of journals" class="card">
       <mat-card-header>
-        <mat-card-title>{{name}}</mat-card-title>
+        <mat-card-title>{{journal.username}}</mat-card-title>
         <mat-card-subtitle>{{journal.date}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
@@ -27,11 +41,11 @@
 
   </div>
   <div class="sticky">
-      <p>
-        right
-      </p>
-  
-    </div>
+    <p>
+      right
+    </p>
+
+  </div>
 </div>
 
 <!-- 
