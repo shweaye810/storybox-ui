@@ -29,7 +29,7 @@
     <mat-card *ngFor="let journal of journals" class="card">
       <mat-card-header>
         <mat-card-title>{{journal.username}}</mat-card-title>
-        <mat-card-subtitle>{{journal.date}}</mat-card-subtitle>
+        <mat-card-subtitle>{{journal.date | date:'medium'}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <p>{{journal.text}}</p>
