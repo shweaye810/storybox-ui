@@ -58,7 +58,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     console.log("text area NgModel text: ", text);
     text = text.trim();
     this.journalService.addJournal({ text } as Journal).subscribe(journal => {
-      this.journals.shift();
       this.journals.unshift(journal)
     });
   }
